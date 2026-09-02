@@ -1,12 +1,108 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ProcheService</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+      text-align: center;
+    }
+
+    header {
+      background: #2563eb;
+      color: white;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 32px;
+    }
+
+    .container {
+      padding: 30px 20px;
+    }
+
+    .search {
+      width: 90%;
+      max-width: 500px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    .button {
+      margin-top: 15px;
+      padding: 14px 25px;
+      border: none;
+      border-radius: 10px;
+      background: #2563eb;
+      color: white;
+      font-size: 16px;
+    }
+
+    .services {
+      margin-top: 30px;
+    }
+
+    .service {
+      background: white;
+      margin: 15px auto;
+      padding: 20px;
+      max-width: 500px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Bienvenue sur ProcheService</h1>
-  <p>Trouvez facilement les services et professionnels proches de vous.</p>
+
+  <header>
+    <h1>ProcheService</h1>
+    <p>Trouvez un professionnel près de chez vous</p>
+  </header>
+
+  <div class="container">
+
+    <input
+      class="search"
+      type="text"
+      placeholder="Quel service recherchez-vous ?"
+    >
+
+    <br>
+
+    <button class="button">Rechercher</button>
+
+    <div class="services">
+
+      <div class="service">
+        🔧 <strong>Plombier</strong>
+        <p>Professionnels disponibles près de vous</p>
+      </div>
+
+      <div class="service">
+        ⚡ <strong>Électricien</strong>
+        <p>Trouvez un électricien proche de chez vous</p>
+      </div>
+
+      <div class="service">
+        🧹 <strong>Nettoyage</strong>
+        <p>Services de nettoyage à proximité</p>
+      </div>
+
+    </div>
+
+  </div>
+
 </body>
 </html>
