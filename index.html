@@ -66,6 +66,25 @@
 
 <body>
   <script>
+function trouverPosition() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      function(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+
+        alert("Votre position a été trouvée !\nLatitude : " + latitude + "\nLongitude : " + longitude);
+      },
+      function() {
+        alert("Impossible d'obtenir votre position.");
+      }
+    );
+  } else {
+    alert("La géolocalisation n'est pas prise en charge par votre navigateur.");
+  }
+}
+  </script>
+  <script>
 function rechercherService() {
   const recherche = document.querySelector(".search").value.toLowerCase().trim();
   const services = document.querySelectorAll(".service");
