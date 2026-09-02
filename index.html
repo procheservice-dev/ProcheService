@@ -73,8 +73,14 @@ function trouverPosition() {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
 
-        alert("Votre position a été trouvée ! 📍");
-      },
+        
+      },document.querySelector(".services").insertAdjacentHTML("afterbegin", `
+  <div class="service">
+    📍 <strong>Jean - Mécanicien</strong>
+    <p>Professionnel trouvé près de vous</p>
+    <p>Distance : calcul en cours...</p>
+  </div>
+`);
       function() {
         alert("Impossible d'obtenir votre position.");
       }
