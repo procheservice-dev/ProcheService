@@ -65,6 +65,22 @@
 </head>
 
 <body>
+  <script>
+function rechercherService() {
+  const recherche = document.querySelector(".search").value.toLowerCase().trim();
+  const services = document.querySelectorAll(".service");
+
+  services.forEach(function(service) {
+    const nom = service.querySelector("strong").textContent.toLowerCase();
+
+    if (recherche === "" || nom.includes(recherche)) {
+      service.style.display = "block";
+    } else {
+      service.style.display = "none";
+    }
+  });
+}
+                   </script>
 
   <header>
     <h1>ProcheService</h1>
