@@ -70,17 +70,18 @@ function trouverPosition() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       function(position) {
-        const latitude = position.coords.latitude;
-        const longitude = position.coords.longitude;
+        const services = document.querySelector(".services");
 
-        
-      },document.querySelector(".services").insertAdjacentHTML("afterbegin", `
-  <div class="service">
-    📍 <strong>Jean - Mécanicien</strong>
-    <p>Professionnel trouvé près de vous</p>
-    <p>Distance : calcul en cours...</p>
-  </div>
-`);
+        services.insertAdjacentHTML("afterbegin", `
+          <div class="service">
+            📍 <strong>Jean - Mécanicien</strong>
+            <p>Professionnel trouvé près de vous</p>
+            <p>Distance : calcul en cours...</p>
+          </div>
+        `);
+
+        alert("Votre position a été trouvée ! 📍");
+      },
       function() {
         alert("Impossible d'obtenir votre position.");
       }
@@ -89,7 +90,7 @@ function trouverPosition() {
     alert("La géolocalisation n'est pas prise en charge par votre navigateur.");
   }
 }
-  </script>
+</script>
   <script>
 function rechercherService() {
   const recherche = document.querySelector(".search").value.toLowerCase().trim();
